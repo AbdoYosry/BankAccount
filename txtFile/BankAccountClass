@@ -1,0 +1,26 @@
+package testbankaccount;
+public class BankAccount {
+    
+ public String name ;
+ public String AccountNumber ;
+ public String Serial ;
+ public int Balance ;
+
+    public BankAccount(String name, String AccountNumber, String Serial, int Balance) {
+        this.name = name;
+        this.AccountNumber = AccountNumber;
+        this.Serial = Serial;
+        this.Balance = Balance;
+    }
+    
+ //---------------------------------
+ 
+ public void put ( int x ){    
+ Balance += x ;
+ }
+ 
+ public int get ( ){
+ return Balance ;    
+ }
+       
+}
