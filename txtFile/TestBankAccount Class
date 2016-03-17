@@ -1,0 +1,112 @@
+package testbankaccount;
+import javax.swing.JOptionPane;
+
+public class TestBankAccount {
+
+    
+    public static void main(String[] args) {
+    
+    // The Accounts are registrar in the Bank
+        
+      BankAccount b1 = new BankAccount( "Ahmed" , "1" , "12345" , 2000 );
+      BankAccount b2 = new BankAccount( "Mohammed" , "2" , "25252" , 3000 );
+      BankAccount b3 = new BankAccount( "Ali" , "3" , "12121" , 4000 );
+      
+    //--------------------------------------    
+              
+    String name ;
+    name = JOptionPane.showInputDialog("Please enter your name");
+    String Serial ;
+    Serial = JOptionPane.showInputDialog("Please enter your Serial");
+    
+    if ( (name == null ? b1.name == null : name.equals(b1.name)) && (Serial == null ? b1.Serial == null : Serial.equals(b1.Serial)) ){
+       String msg1 = "Your Balance = " + b1.Balance ;
+       JOptionPane.showMessageDialog(null, msg1); 
+       
+       String Operation  ;
+       Operation = JOptionPane.showInputDialog( " What Operation You want To Do ( Set or Put ) ?? " ); 
+       
+       if ( "Set".equals(Operation) ){
+       String Set ;
+       Set = JOptionPane.showInputDialog( " Please Set The Amount You Want To Set " );
+       int x = Integer.parseInt(Set);
+       b1.Balance += x ;
+       JOptionPane.showMessageDialog(null, " Your new Balance = " + b1.Balance );
+       JOptionPane.showMessageDialog(null, " Thank You For Using Our Program " );
+       }
+       else if ( "Put".equals(Operation) ){
+       String Put = "";
+       Put = JOptionPane.showInputDialog( " Please Set The Amount You Want To Set " );
+       int x = Integer.parseInt(Put);
+       b1.Balance -= x ;
+       JOptionPane.showMessageDialog(null, " Your new Balance = " + b1.Balance );
+       JOptionPane.showMessageDialog(null, " Thank You For Using Our Program " );
+       }
+       else {
+       JOptionPane.showMessageDialog(null, " Sorry , Wrong Operatin !!! " );    
+       }
+       
+    }
+    
+    else if ( (name == null ? b2.name == null : name.equals(b2.name)) && (Serial == null ? b2.Serial == null : Serial.equals(b2.Serial)) ){
+       String msg1 = "Your Balance = " + b2.Balance ;
+       JOptionPane.showMessageDialog(null, msg1);  
+       
+       String Operation  ;
+       Operation = JOptionPane.showInputDialog( " What Operation You want To Do ( Set or Put ) ?? " ); 
+       
+       if ( "Set".equals(Operation) ){
+       String Set ;
+       Set = JOptionPane.showInputDialog( " Please Set The Amount You Want To Set " );
+       int x = Integer.parseInt(Set);
+       b2.Balance += x ;
+       JOptionPane.showMessageDialog(null, " Your new Balance = " + b2.Balance );
+       JOptionPane.showMessageDialog(null, " Thank You For Using Our Program " );
+       }
+       else if ( "Put".equals(Operation) ){
+       String Put ;
+       Put = JOptionPane.showInputDialog( " Please Set The Amount You Want To Set " );
+       int x = Integer.parseInt(Put);
+       b2.Balance -= x ;
+       JOptionPane.showMessageDialog(null, " Your new Balance = " + b2.Balance );
+       JOptionPane.showMessageDialog(null, " Thank You For Using Our Program " );
+       }
+       else {
+       JOptionPane.showMessageDialog(null, " Sorry , Wrong Operatin !!! " );    
+       }
+    }
+    
+    else if ( (name == null ? b3.name == null : name.equals(b3.name)) && (Serial == null ? b3.Serial == null : Serial.equals(b3.Serial)) ){
+       String msg = "Your Balance = " + b3.Balance ;
+       JOptionPane.showMessageDialog(null, msg);  
+       
+       String Operation  ;
+       Operation = JOptionPane.showInputDialog( " What Operation You want To Do ( Set or Put ) ?? " ); 
+       
+       if ( "Set".equals(Operation) ){
+       String Set ;
+       Set = JOptionPane.showInputDialog( " Please Set The Amount You Want To Set " );
+       int x = Integer.parseInt(Set);
+       b3.Balance += x ;
+       JOptionPane.showMessageDialog(null, " Your new Balance = " + b3.Balance );
+       JOptionPane.showMessageDialog(null, " Thank You For Using Our Program " );
+       }
+       else if ( "Put".equals(Operation) ){
+       String Put ;
+       Put = JOptionPane.showInputDialog( " Please Set The Amount You Want To Set " );
+       int x = Integer.parseInt(Put);
+       b3.Balance -= x ;
+       JOptionPane.showMessageDialog(null, " Your new Balance = " + b3.Balance );
+       JOptionPane.showMessageDialog(null, " Thank You For Using Our Program " );
+       }
+       else {
+       JOptionPane.showMessageDialog(null, " Sorry , Wrong Operatin !!! " );    
+       }
+    }
+    
+    else {
+       String msg = " Sorry You Dont Have Account " ;
+       JOptionPane.showMessageDialog(null, msg);   
+    }        
+   }        
+  }
